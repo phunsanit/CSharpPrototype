@@ -9,8 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-namespace CSharpPrototype
+namespace PrototypeCSharp
 {
     public partial class FormMain : Form
     {
@@ -21,7 +20,7 @@ namespace CSharpPrototype
             AssemblyName thisAssemName = this.GetType().Assembly.GetName();
 
             this.Text = thisAssemName.Name + " Version " + thisAssemName.Version;
-        }
 
+        }
     }
 }
