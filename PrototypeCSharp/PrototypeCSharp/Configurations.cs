@@ -26,13 +26,13 @@ namespace PrototypeCSharp
 
                 case "UAT":
                     {
-                        dsns["dns1"] = "metadata=res://*/Model1.csdl|res://*/Model1.ssdl|res://*/Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=MAGI-1MELCHIOR;initial catalog=prototype_DEV;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;";
+                        dsns["dns1"] = "Server=127.0.0.1;Database=prototype_UAT;User Id=pitt;Password=phunsanit;";
                     }
                     break;
 
                 default:
                     {
-                        dsns["dns1"] = "metadata=res://*/Model1.csdl|res://*/Model1.ssdl|res://*/Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=MAGI-1MELCHIOR;initial catalog=prototype_DEV;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;";
+                        dsns["dns1"] = "Server=127.0.0.1;Database=prototype;User Id=pitt;Password=phunsanit;";
                     }
                     break;
             }

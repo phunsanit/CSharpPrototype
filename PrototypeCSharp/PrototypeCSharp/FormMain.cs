@@ -19,8 +19,14 @@ namespace PrototypeCSharp
 
             AssemblyName thisAssemName = this.GetType().Assembly.GetName();
 
-            this.Text = thisAssemName.Name + " Version " + thisAssemName.Version;
-
+            if (Configurations.environment == "PRODUCTION")
+            {
+                this.Text = thisAssemName.Name + " Version " + thisAssemName.Version;
+            }
+            else
+            {
+                this.Text = thisAssemName.Name + " Version " + thisAssemName.Version + " " + Configurations.environment;
+            }
         }
     }
 }
