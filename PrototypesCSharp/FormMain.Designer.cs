@@ -1,4 +1,5 @@
-﻿namespace PrototypeCSharp
+﻿
+namespace PrototypesCSharp
 {
     partial class FormMain
     {

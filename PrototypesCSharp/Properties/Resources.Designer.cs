@@ -8,10 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PrototypeCSharp.Properties
+
+namespace PrototypesCSharp.Properties
 {
-
-
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -44,7 +43,7 @@ namespace PrototypeCSharp.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PrototypeCSharp.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PrototypesCSharp.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
