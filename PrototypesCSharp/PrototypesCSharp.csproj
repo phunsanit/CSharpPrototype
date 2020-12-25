@@ -25,4 +25,14 @@
     </None>
   </ItemGroup>
 
+  <Target Name="GetAssmeblyVersion" AfterTargets="Build">
+    <GetAssemblyIdentity AssemblyFiles="$(TargetPath)">
+      <Output TaskParameter="Assemblies" ItemName="MyAssemblyIdentities" />
+    </GetAssemblyIdentity>
+    <Message Text="Assmebly Version: %(MyAssemblyIdentities.Version)" />
+  </Target>
+  <Target Name="PostBuild" AfterTargets="GetAssmeblyVersion">
+    <Exec Command="copy /Y &quot;$(ProjectDir)$(OutDir)\$(TargetName).exe&quot; &quot;$(ProjectDir)$(OutDir)\$(TargetName) v.%(MyAssemblyIdentities.Version)_$(ConfigurationName).exe&quot;&#xD;&#xA;&#xD;&#xA;" />
+  </Target>
+
 </Project>
