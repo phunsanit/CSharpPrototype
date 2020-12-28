@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace PrototypesCSharp
 {
-    public partial class FormMain : Form
+    public partial class FormAssemblyVersion : Form
     {
-        public FormMain()
+        public FormAssemblyVersion()
         {
             InitializeComponent();
 

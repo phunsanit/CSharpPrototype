@@ -1,7 +1,7 @@
 ﻿
 namespace PrototypesCSharp
 {
-    partial class FormMain
+    partial class FormAssemblyVersion
     {
         /// <summary>
         /// Required designer variable.
