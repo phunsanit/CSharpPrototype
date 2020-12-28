@@ -41,7 +41,7 @@ namespace PrototypesCSharp
         {
             try
             {
-                //toolStripMenuItemAssemblyVersion
+                //toolStripMenuItem name like "toolStripMenuItem{form class}" -> "toolStripMenuItemAssemblyVersion"
                 String formName = e.ClickedItem.Name.Split(new[] { "toolStripMenuItem" }, StringSplitOptions.None)[1];
 
                 Form frm = TryGetFormByName(formName);

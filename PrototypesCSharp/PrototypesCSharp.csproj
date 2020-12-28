@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <AssemblyVersion>1.0.0.2</AssemblyVersion>
+    <Authors>Pitt Phunsanit</Authors>
+    <Company>RedMagi</Company>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
-    <Authors>Pitt Phunsanit</Authors>
-    <Company>RedMagi</Company>
-    <AssemblyVersion>1.0.0.1</AssemblyVersion>
-    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
   </PropertyGroup>
 
   <ItemGroup>
