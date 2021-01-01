@@ -31,6 +31,7 @@ namespace PrototypesCSharp
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItemFormAssemblyVersion = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemFormTasks = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -39,7 +40,8 @@ namespace PrototypesCSharp
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemFormAssemblyVersion});
+            this.toolStripMenuItemFormAssemblyVersion,
+            this.toolStripMenuItemFormTasks});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 33);
@@ -52,6 +54,12 @@ namespace PrototypesCSharp
             this.toolStripMenuItemFormAssemblyVersion.Name = "toolStripMenuItemFormAssemblyVersion";
             this.toolStripMenuItemFormAssemblyVersion.Size = new System.Drawing.Size(168, 29);
             this.toolStripMenuItemFormAssemblyVersion.Text = "Assembly Version";
+            // 
+            // toolStripMenuItemFormTasks
+            // 
+            this.toolStripMenuItemFormTasks.Name = "toolStripMenuItemFormTasks";
+            this.toolStripMenuItemFormTasks.Size = new System.Drawing.Size(69, 29);
+            this.toolStripMenuItemFormTasks.Text = "Tasks";
             // 
             // panel1
             // 
@@ -83,5 +91,6 @@ namespace PrototypesCSharp
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemFormAssemblyVersion;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemFormTasks;
     }
 }
