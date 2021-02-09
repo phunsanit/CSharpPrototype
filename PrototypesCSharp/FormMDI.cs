@@ -48,6 +48,8 @@ namespace PrototypesCSharp
 
             frm.Show();
 
+            panelMDI.Controls.Add(frm);
+
             return frm;
         }
 
@@ -58,8 +60,6 @@ namespace PrototypesCSharp
                 String formName = e.ClickedItem.Name.Split(new[] { "toolStripMenuItem" }, StringSplitOptions.None)[1];
 
                 Form frm = TryGetFormByName(formName);
-
-                panelMDI.Controls.Add(frm);
             }
             catch (Exception ex)
             {
