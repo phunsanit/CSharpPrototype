@@ -30,7 +30,7 @@ namespace PrototypesCSharp
                 .FirstOrDefault();
 
             if (formType == null)
-            {// If there is no form with the given frmName
+            {//if no form
                 return null;
             }
 
@@ -53,6 +53,7 @@ namespace PrototypesCSharp
             return frm;
         }
 
+        //on menu click
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             try
@@ -64,6 +65,17 @@ namespace PrototypesCSharp
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        //resize form inside when main windows resize
+        private void panelMDI_Resize(object sender, EventArgs e)
+        {
+            foreach (Form frm in panel1.Controls)
+            {
+                frm.WindowState = FormWindowState.Normal;
+
+                frm.WindowState = FormWindowState.Maximized;
             }
         }
 

@@ -29,26 +29,26 @@ namespace PrototypesCSharp
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuStripMain = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItemFormAssemblyVersion = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemFormTasks = new System.Windows.Forms.ToolStripMenuItem();
             this.panelMDI = new System.Windows.Forms.Panel();
-            this.menuStrip1.SuspendLayout();
+            this.menuStripMain.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // menuStripMain
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStripMain.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItemFormAssemblyVersion,
             this.toolStripMenuItemFormTasks});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(560, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
+            this.menuStripMain.Location = new System.Drawing.Point(0, 0);
+            this.menuStripMain.Name = "menuStripMain";
+            this.menuStripMain.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
+            this.menuStripMain.Size = new System.Drawing.Size(560, 24);
+            this.menuStripMain.TabIndex = 0;
+            this.menuStripMain.Text = "menuStripMain";
+            this.menuStripMain.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // toolStripMenuItemFormAssemblyVersion
             // 
@@ -67,10 +67,11 @@ namespace PrototypesCSharp
             this.panelMDI.AutoSize = true;
             this.panelMDI.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMDI.Location = new System.Drawing.Point(0, 24);
-            this.panelMDI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelMDI.Margin = new System.Windows.Forms.Padding(2);
             this.panelMDI.Name = "panelMDI";
             this.panelMDI.Size = new System.Drawing.Size(560, 246);
             this.panelMDI.TabIndex = 1;
+            this.panelMDI.Resize += new System.EventHandler(this.panelMDI_Resize);
             // 
             // FormMDI
             // 
@@ -78,12 +79,12 @@ namespace PrototypesCSharp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(560, 270);
             this.Controls.Add(this.panelMDI);
-            this.Controls.Add(this.menuStrip1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.menuStripMain);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormMDI";
             this.Text = "Multiple-Document Interface (MDI) Applications";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.menuStripMain.ResumeLayout(false);
+            this.menuStripMain.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -91,7 +92,7 @@ namespace PrototypesCSharp
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip menuStripMain;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemFormAssemblyVersion;
         private System.Windows.Forms.Panel panelMDI;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemFormTasks;
