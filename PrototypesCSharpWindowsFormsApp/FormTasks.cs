@@ -1,19 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Globalization;
-using System.Text;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PrototypesCSharp
+namespace PrototypesCSharpWindowsFormsApp
 {
     public partial class FormTasks : Form
     {
         private CultureInfo ci = CultureInfo.InvariantCulture;
+
         private Dictionary<string, string> months = new Dictionary<string, string>()
             {
         {"01","January"},
@@ -96,6 +93,5 @@ namespace PrototypesCSharp
 
             MessageBox.Show("End Main get reultsts " + reultsts.Count() + " months");
         }
-
     }
 }

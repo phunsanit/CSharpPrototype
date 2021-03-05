@@ -1,5 +1,5 @@
 ﻿
-namespace PrototypesCSharp
+namespace PrototypesCSharpWindowsFormsApp
 {
     partial class FormMDI
     {
@@ -71,7 +71,6 @@ namespace PrototypesCSharp
             this.panelMDI.Name = "panelMDI";
             this.panelMDI.Size = new System.Drawing.Size(560, 246);
             this.panelMDI.TabIndex = 1;
-            this.panelMDI.Resize += new System.EventHandler(this.panelMDI_Resize);
             // 
             // FormMDI
             // 
@@ -83,6 +82,7 @@ namespace PrototypesCSharp
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormMDI";
             this.Text = "Multiple-Document Interface (MDI) Applications";
+            this.SizeChanged += new System.EventHandler(this.FormMDI_SizeChanged);
             this.menuStripMain.ResumeLayout(false);
             this.menuStripMain.PerformLayout();
             this.ResumeLayout(false);

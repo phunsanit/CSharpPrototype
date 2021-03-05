@@ -1,13 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <AssemblyVersion>1.0.0.2</AssemblyVersion>
+    <AssemblyVersion>1.0.0.3</AssemblyVersion>
     <Authors>Pitt Phunsanit</Authors>
     <Company>RedMagi</Company>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
+    <Version>1.0.0</Version>
+    <Product>Prototypes C# Windows Forms App</Product>
+    <Description />
   </PropertyGroup>
 
   <ItemGroup>

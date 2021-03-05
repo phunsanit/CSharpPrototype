@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PrototypesCSharp
+namespace PrototypesCSharpWindowsFormsApp
 {
     public partial class FormMDI : Form
     {
@@ -18,11 +13,15 @@ namespace PrototypesCSharp
             InitializeComponent();
         }
 
-        public Form TryGetFormByName(string frmName)
+        public Form TryGetFormByName(string frmName, bool closeAll = false)
         {
-            if (panelMDI.Controls.Count > 0)
+            //Close All
+            if (closeAll)
             {
-                panelMDI.Controls.RemoveAt(0);
+                if (panelMDI.Controls.Count > 0)
+                {
+                    panelMDI.Controls.RemoveAt(0);
+                }
             }
 
             var formType = Assembly.GetExecutingAssembly().GetTypes()
@@ -43,12 +42,13 @@ namespace PrototypesCSharp
             frm.Height = panelMDI.Height;
             frm.TopLevel = false;
             frm.TopMost = true;
-            frm.WindowState = FormWindowState.Maximized;
             frm.Width = panelMDI.Width;
 
             frm.Show();
 
             panelMDI.Controls.Add(frm);
+
+            frm.WindowState = FormWindowState.Maximized;
 
             return frm;
         }
@@ -61,6 +61,7 @@ namespace PrototypesCSharp
                 String formName = e.ClickedItem.Name.Split(new[] { "toolStripMenuItem" }, StringSplitOptions.None)[1];
 
                 Form frm = TryGetFormByName(formName);
+                //Form frm = TryGetFormByName(formName, true);
             }
             catch (Exception ex)
             {
@@ -68,16 +69,15 @@ namespace PrototypesCSharp
             }
         }
 
-        //resize form inside when main windows resize
-        private void panelMDI_Resize(object sender, EventArgs e)
+        private void FormMDI_SizeChanged(object sender, EventArgs e)
         {
-            foreach (Form frm in panel1.Controls)
+            foreach (Form frm in panelMDI.Controls)
             {
-                frm.WindowState = FormWindowState.Normal;
+                frm.MinimumSize = panelMDI.Size;
+                frm.MaximumSize = panelMDI.Size;
 
-                frm.WindowState = FormWindowState.Maximized;
+                frm.WindowState = this.WindowState;
             }
         }
-
     }
 }

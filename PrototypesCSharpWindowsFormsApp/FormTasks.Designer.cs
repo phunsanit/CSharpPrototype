@@ -1,5 +1,5 @@
 ﻿
-namespace PrototypesCSharp
+namespace PrototypesCSharpWindowsFormsApp
 {
     partial class FormTasks
     {
