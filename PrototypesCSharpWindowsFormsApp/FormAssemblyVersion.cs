@@ -20,5 +20,6 @@ namespace PrototypesCSharpWindowsFormsApp
                 this.Text = thisAssemName.Name + " Version " + thisAssemName.Version + " " + Configurations.environment;
             }
         }
+
     }
 }

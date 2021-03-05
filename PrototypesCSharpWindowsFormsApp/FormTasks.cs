@@ -32,27 +32,6 @@ namespace PrototypesCSharpWindowsFormsApp
             InitializeComponent();
         }
 
-        public async Task<List<string>> TaskRun(string monthNo, string monthName)
-        {
-            Random random = new Random();
-            string time;
-            int sleep;
-            var results = new List<string>();
-
-            for (int a = 1; a <= 3; a++)
-            {
-                sleep = random.Next(1, 10) * 1000;
-                System.Threading.Thread.Sleep(sleep);
-
-                time = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss", ci);
-
-                dataGridView1.Rows[Convert.ToInt32(monthNo) - 1].Cells[a + 1].Value = time;
-                results.Add(monthName.PadRight(100) + "try on " + a + " -> " + time);
-            }
-
-            return results;
-        }
-
         public async Task<List<string>> RunAsync(Dictionary<string, string> months)
         {
             var tasks = new List<Task>();
@@ -80,6 +59,27 @@ namespace PrototypesCSharpWindowsFormsApp
             return reultsts;
         }
 
+        public async Task<List<string>> TaskRun(string monthNo, string monthName)
+        {
+            Random random = new Random();
+            string time;
+            int sleep;
+            var results = new List<string>();
+
+            for (int a = 1; a <= 3; a++)
+            {
+                sleep = random.Next(1, 10) * 1000;
+                System.Threading.Thread.Sleep(sleep);
+
+                time = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss", ci);
+
+                dataGridView1.Rows[Convert.ToInt32(monthNo) - 1].Cells[a + 1].Value = time;
+                results.Add(monthName.PadRight(100) + "try on " + a + " -> " + time);
+            }
+
+            return results;
+        }
+
         private void buttonExecute_Click(object sender, EventArgs e)
         {
             var reultsts = new List<string>();
@@ -93,5 +93,6 @@ namespace PrototypesCSharpWindowsFormsApp
 
             MessageBox.Show("End Main get reultsts " + reultsts.Count() + " months");
         }
+
     }
 }

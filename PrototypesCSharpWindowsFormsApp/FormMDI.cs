@@ -53,6 +53,17 @@ namespace PrototypesCSharpWindowsFormsApp
             return frm;
         }
 
+        private void FormMDI_SizeChanged(object sender, EventArgs e)
+        {
+            foreach (Form frm in panelMDI.Controls)
+            {
+                frm.MinimumSize = panelMDI.Size;
+                frm.MaximumSize = panelMDI.Size;
+
+                frm.WindowState = this.WindowState;
+            }
+        }
+
         //on menu click
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
@@ -69,15 +80,5 @@ namespace PrototypesCSharpWindowsFormsApp
             }
         }
 
-        private void FormMDI_SizeChanged(object sender, EventArgs e)
-        {
-            foreach (Form frm in panelMDI.Controls)
-            {
-                frm.MinimumSize = panelMDI.Size;
-                frm.MaximumSize = panelMDI.Size;
-
-                frm.WindowState = this.WindowState;
-            }
-        }
     }
 }
